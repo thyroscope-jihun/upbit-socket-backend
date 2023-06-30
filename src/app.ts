@@ -11,6 +11,12 @@ interface PrevTime {
   [key: string]: moment.Moment | undefined;
 }
 
+var plus5EnvelopList = [];
+var plus20EnvelopList = [];
+var minus5EnvelopList = [];
+var minus20EnvelopList = [];
+
+
 const startSocket = () => {
   const socket = new WebSocket("wss://api.upbit.com/websocket/v1");
 

@@ -25,7 +25,7 @@ class Slack {
     }
     static get Channels() {
         return {
-            fiveAverage: "https://hooks.slack.com/services/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",
+            fiveAverage: "https://hooks.slack.com/services/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",
         };
     }
     //private function
@@ -56,6 +56,30 @@ class Slack {
         return __awaiter(this, void 0, void 0, function* () {
             const payload = {
                 text: "서버 재시작",
+                attachments: [
+                    {
+                        color: this.Colors.success,
+                        blocks: [
+                            {
+                                type: "section",
+                                fields: [
+                                    {
+                                        type: "mrkdwn",
+                                        text: `서버가 실행되었습니다.`,
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                ],
+            };
+            yield this.sendmessage(payload, this.Channels.fiveAverage);
+        });
+    }
+    static sendStart() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const payload = {
+                text: "서버 ON",
                 attachments: [
                     {
                         color: this.Colors.success,

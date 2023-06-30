@@ -18,6 +18,10 @@ const moment_1 = __importDefault(require("moment"));
 const util_1 = require("./util");
 const node_schedule_1 = __importDefault(require("node-schedule"));
 const slack_1 = __importDefault(require("./slack"));
+var plus5EnvelopList = [];
+var plus20EnvelopList = [];
+var minus5EnvelopList = [];
+var minus20EnvelopList = [];
 const startSocket = () => {
     const socket = new ws_1.default("wss://api.upbit.com/websocket/v1");
     var mappedMarket = {};

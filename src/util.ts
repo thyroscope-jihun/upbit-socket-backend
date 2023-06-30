@@ -24,7 +24,7 @@ export const comparePrice = async (price: number, item: MarketInfo) => {
   if (moment().diff(moment(item.catchTime, "YYYYMMDDHHmmss"), "minutes") < 10) {
     return false;
   } else if (price > item.envelopplus5) {
-    await Slack.sendEnvelop(item.marketKo, 5, "success");
+    // await Slack.sendEnvelop(item.marketKo, 5, "success");
     return true;
   } else if (price < item.envelopmin20) {
     await Slack.sendEnvelop(item.marketKo, -20, "danger");

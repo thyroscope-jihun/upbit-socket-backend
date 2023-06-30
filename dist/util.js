@@ -33,7 +33,7 @@ const comparePrice = (price, item) => __awaiter(void 0, void 0, void 0, function
         return false;
     }
     else if (price > item.envelopplus5) {
-        yield slack_1.default.sendEnvelop(item.marketKo, 5, "success");
+        // await Slack.sendEnvelop(item.marketKo, 5, "success");
         return true;
     }
     else if (price < item.envelopmin20) {

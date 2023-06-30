@@ -13,7 +13,7 @@ class Slack {
   static get Channels() {
     return {
       fiveAverage:
-        "https://hooks.slack.com/services/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",
+        "https://hooks.slack.com/services/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",
     };
   }
   //private function
